@@ -4,6 +4,7 @@ import React from 'react';
 import { RiTimer2Line } from "react-icons/ri";
 import { FaFire } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
+import Link from 'next/link';
 
 interface LibraryProps{
     library: LibraryType
@@ -11,6 +12,7 @@ interface LibraryProps{
 
 const LibraryCard = ({library}:LibraryProps) => {
     return (
+        <Link href={`/${library.id}`}>
         <div className='bg-[#15171D] border-0 rounded-xl overflow-hidden'>
             <Image src={library.image} width={400} height={200} alt=''></Image>
            <div className='p-4'>
@@ -36,6 +38,7 @@ const LibraryCard = ({library}:LibraryProps) => {
            </div>
             
         </div>
+        </Link>
     );
 };
 

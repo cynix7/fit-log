@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Navbar = () => {
 
     const Links = <>
-        <li className='bg-[#1A2312] border-0 rounded-3xl text-[#C2F800]'><Link href='/workouts'> Workouts</Link></li>
+        <li className='bg-[#1A2312] border-0 rounded-3xl text-[#C2F800]'><Link href='/'> Workouts</Link></li>
         <li className='text-[#9CA3AF]'><Link href='/myplan'>My Plan</Link></li>
     </>
     return (
