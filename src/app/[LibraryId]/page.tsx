@@ -1,8 +1,10 @@
+import AddPlan from '@/components/Interactivity/AddPlan';
+import AddSaved from '@/components/Interactivity/AddSaved';
 import { LibraryType } from '@/Type/LibraryType';
 import Image from 'next/image';
 import React from 'react';
-import { VscSave } from "react-icons/vsc";
-import { RiFileAddLine } from "react-icons/ri";
+
+
 
 interface paramsType {
     params: {
@@ -48,8 +50,8 @@ const DetailspPage = async ({ params }: paramsType) => {
                     <li>4. Keep shoulder blades pinched and a natural arch in the back.</li>
                 </ol>
                 <div className='flex gap-2 mt-8'>
-                    <button className='flex items-center gap-1.5 border border-[#374151] rounded-lg p-2.5 text-xs font-semibold'><RiFileAddLine />Add to today's plan</button>
-                    <button className='flex items-center gap-1.5 border border-[#374151] rounded-lg p-2.5 text-xs font-semibold'> <VscSave />Save for later</button>
+                    <AddPlan library={library}></AddPlan>
+                    <AddSaved library={library}></AddSaved>
                 </div>
             </div>
         </div>

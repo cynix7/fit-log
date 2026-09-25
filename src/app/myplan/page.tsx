@@ -26,7 +26,7 @@ const page = () => {
                     <h2>Saved</h2>
                 </div>
                 <div className='flex items-center gap-4'>
-                    <h2>Sort By</h2>
+                    <h2 className='text-[#A1A1AA] text-xs'>Sort By</h2>
                     <button className='flex items-center gap-2.5 p-1.5 bg-[#13161D] border border-[#232732] rounded-lg'>Duration <span><RiArrowDropDownLine /></span></button>
                 </div>
             </div>
