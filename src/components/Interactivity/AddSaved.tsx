@@ -9,12 +9,17 @@ const AddSaved = ({library}:{library:LibraryType}) => {
     const{saved,setSaved}=useContext(WorkoutContext);
 
     const handleSaveBtn=()=>{
-    setSaved([...saved,library]);
-    toast.success(`${library.name} saved successfully`)
+    if(saved.some((element:LibraryType)=>element.id==library.id)){
+        toast.error('Already saved');
+    }
+    else{
+        setSaved([...saved,library]);
+    toast.success(`Saved for later`);
+    }
     }
     return (
         <div>
-            <button onClick={()=>handleSaveBtn()} className='flex items-center gap-1.5 border border-[#374151] rounded-lg p-2.5 text-xs font-semibold'> <VscSave />Save for later</button>
+            <button onClick={()=>handleSaveBtn()} className='flex items-center gap-1.5 border border-[#374151] rounded-lg cursor-pointer p-2.5 text-xs font-semibold'> <VscSave />Save for later</button>
         </div>
     );
 };

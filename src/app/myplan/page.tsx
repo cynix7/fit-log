@@ -1,3 +1,5 @@
+import ShowMyPlan from '@/components/Myplan/ShowMyPlan';
+import Tab from '@/components/Myplan/Tab';
 import React from 'react';
 import { RiArrowDropDownLine } from "react-icons/ri";
 
@@ -22,18 +24,15 @@ const page = () => {
             </div>
             <div className='flex justify-between mt-4'>
                 <div className='flex items-center gap-4 bg-[#13161D]'>
-                    <h2>Today's Plan</h2>
-                    <h2>Saved</h2>
+                    <Tab></Tab>
                 </div>
                 <div className='flex items-center gap-4'>
                     <h2 className='text-[#A1A1AA] text-xs'>Sort By</h2>
                     <button className='flex items-center gap-2.5 p-1.5 bg-[#13161D] border border-[#232732] rounded-lg'>Duration <span><RiArrowDropDownLine /></span></button>
                 </div>
             </div>
-            <div className='text-center bg-[#000000] border border-dashed border-[#232732] rounded-xl py-12 mt-4'>
-                <h2 className='font-bold'>NOTHING HERE YET</h2>
-                <p className='text-[#A1A1AA] text-xs'>Browse the library and add a lift to get today moving.</p>
-                <button className='my-4'><h2 className='bg-[#C2F800] text-black text-center text-xs font-bold uppercase p-2.5 border-0 rounded-2xl'>Go to workouts</h2></button>
+            <div>
+                <ShowMyPlan></ShowMyPlan>
             </div>
         </div>
     );

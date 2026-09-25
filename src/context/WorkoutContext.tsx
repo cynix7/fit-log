@@ -6,8 +6,9 @@ export const WorkoutContext= createContext({});
 const WorkoutProvider = ({children}:{children:ReactNode}) => {
     const[plan,setPlan]=useState([]);
     const[saved,setSaved]=useState([]);
+    const [tab, setTab] = useState("myPlan");
     const sharedData={
-        plan,setPlan,saved,setSaved
+        plan,setPlan,saved,setSaved,tab,setTab
     }
     return <WorkoutContext.Provider value={sharedData}>{children}</WorkoutContext.Provider>
 };
