@@ -2,6 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import logo from '../../public/logo.png'
 import Link from 'next/link';
+import Plan from './Counter/Plan';
+import Saved from './Counter/Saved';
 
 const Navbar = () => {
 
@@ -10,7 +12,7 @@ const Navbar = () => {
         <li className='text-[#9CA3AF]'><Link href='/myplan'>My Plan</Link></li>
     </>
     return (
-        <nav className=' bg-black border-b border-[#1C1F26]'>
+        <nav className=' bg-black border-b border-[#1C1F26] sticky top-0 z-50'>
             <div className="navbar shadow-sm container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -33,8 +35,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-4">
-                    <Link href='/myplan' className='text-[#9CA3AF]'>Plan <span className='inline-flex w-6 h-6 bg-[#C2F800] border-0 rounded-full justify-center items-center font-bold text-black'>0</span></Link>
-                    <Link href='/myplan' className='text-[#9CA3AF]'>Saved <span className='inline-flex w-6 h-6 border border-[#9CA3AF] rounded-full justify-center items-center font-bold text-[#9CA3AF]'>0</span></Link>
+                    <Link href='/myplan' className='text-[#9CA3AF] flex items-center gap-2.5'>Plan <Plan></Plan></Link>
+                    <Link href='/myplan' className='text-[#9CA3AF] flex items-center gap-2.5'>Saved <Saved></Saved></Link>
                     
                 </div>
             </div>

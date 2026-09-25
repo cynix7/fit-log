@@ -1,3 +1,6 @@
+import Calories from '@/components/Counter/Calories';
+import Duration from '@/components/Counter/Duration';
+import ExerciseCounter from '@/components/Counter/ExerciseCounter';
 import ShowMyPlan from '@/components/Myplan/ShowMyPlan';
 import Tab from '@/components/Myplan/Tab';
 import React from 'react';
@@ -11,15 +14,15 @@ const page = () => {
             <div className='grid grid-cols-3 bg-[#13161D] border border-[#232732] rounded-xl p-6'>
                 <div>
                     <h2 className='text-[#A1A1AA] text-xs'>Exercises</h2>
-                    <p className='text-4xl font-bold'>2</p>
+                    <ExerciseCounter></ExerciseCounter>
                 </div>
                 <div className='px-8 border-2 border-x-[#232732] border-y-[#13161D]'>
                     <h2 className='text-[#A1A1AA] text-xs'>Minutes</h2>
-                    <p className='text-4xl font-bold'>23</p>
+                    <Duration></Duration>
                 </div>
                 <div className='px-8'>
                     <h2 className='text-[#A1A1AA] text-xs'>Calories</h2>
-                    <p className='text-4xl font-bold'>190</p>
+                    <Calories></Calories>
                 </div>
             </div>
             <div className='flex justify-between mt-4'>
