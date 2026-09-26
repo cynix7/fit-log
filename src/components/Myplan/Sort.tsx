@@ -12,10 +12,10 @@ const Sort = () => {
             <select
                 value={sortBy}
                 onChange={(e)=>setSortBy(e.target.value)}
-                defaultValue="Server location" className="select select-neutral"> 
-                <option>Duration</option>
-                <option>Calories</option>
-                <option>Rating</option>
+                className="select select-neutral"> 
+                <option value='Duration'>Duration</option>
+                <option value='Calories'>Calories</option>
+                <option value='Rating'>Rating</option>
             </select>
         </div>
     );

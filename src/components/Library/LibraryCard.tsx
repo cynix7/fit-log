@@ -14,7 +14,9 @@ const LibraryCard = ({library}:LibraryProps) => {
     return (
         <Link href={`/${library.id}`}>
         <div className='bg-[#15171D] border-0 rounded-xl overflow-hidden'>
-            <Image src={library.image} width={400} height={200} alt=''></Image>
+            <div className='w-full relative h-50'>
+                <Image src={library.image} fill className='object-cover' alt=''></Image>
+            </div>
            <div className='p-4'>
              <div className='flex gap-2'> 
                 {

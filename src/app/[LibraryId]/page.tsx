@@ -3,6 +3,7 @@ import AddSaved from '@/components/Interactivity/AddSaved';
 import { LibraryType } from '@/Type/LibraryType';
 import Image from 'next/image';
 import React from 'react';
+import { notFound } from 'next/navigation';
 
 
 
@@ -14,9 +15,13 @@ interface paramsType {
 
 const DetailspPage = async ({ params }: paramsType) => {
     const { LibraryId } = await params;
-    const library: LibraryType = await (await fetch(`https://api.abcz.workers.dev/api/fitlog/${LibraryId}`)).json()
+    const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${LibraryId}`);
+    if (!res.ok) {
+        notFound();
+    }
+    const library: LibraryType=await res.json();
     return (
-        <div className='grid grid-cols-2 gap-8 container mx-auto mt-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-8 container mx-auto mt-8'>
             <div className='rounded-3xl overflow-hidden'>
                 <Image src={library.image} alt='' width={400} height={200} className='w-full'></Image>
             </div>
@@ -49,7 +54,7 @@ const DetailspPage = async ({ params }: paramsType) => {
                     <li>3. Press up in a slight arc until elbows lock without bouncing.</li>
                     <li>4. Keep shoulder blades pinched and a natural arch in the back.</li>
                 </ol>
-                <div className='flex gap-2 mt-8'>
+                <div className='flex gap-2 mt-8 justify-center sm:justify-start'>
                     <AddPlan library={library}></AddPlan>
                     <AddSaved library={library}></AddSaved>
                 </div>
