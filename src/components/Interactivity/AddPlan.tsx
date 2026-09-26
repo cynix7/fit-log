@@ -20,7 +20,7 @@ const AddPlan = ({library}:{library:LibraryType}) => {
     }
     return (
         <div>
-            <button onClick={()=>handlePlanBtn()} className='flex items-center gap-1.5 border border-[#374151] cursor-pointer rounded-lg p-2.5 text-xs font-semibold'><RiFileAddLine />Add to today's plan</button>
+            <button onClick={()=>handlePlanBtn()} className='bg-[#C2F800] text-black flex items-center gap-1.5 border border-[#374151] cursor-pointer rounded-lg p-2.5 text-xs font-semibold'><RiFileAddLine />Add to today's plan</button>
         </div>
     );
 };

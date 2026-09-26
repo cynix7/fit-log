@@ -10,9 +10,9 @@ const Banner = () => {
                 <h2 className='text-4xl font-bold my-4'>TRAIN WITH INTENT. LOG <br />EVERY SET.</h2>
                 <p className='text-[#9CA3AF] mb-4 text-xs'>FitLog is a dark, no-nonsense gym companion: pick a lift, lock it
                     into today's plan, and watch the week's work add up.</p>
-                <button className='bg-[#C2F800] text-black border-0 rounded-sm text-xs font-semibold p-2'>BROWSE WORKOUT</button>
+                <a href="#Library"><button className='bg-[#C2F800] text-black border-0 rounded-sm text-xs font-semibold cursor-pointer p-2'>BROWSE WORKOUT</button></a>
             </div>
-            <div className='p-24 ml-8'>
+            <div className='ml-16 my-6'>
                 <Image src={bannerimg} alt='banner'></Image>
             </div>
         </div>

@@ -6,17 +6,17 @@ const Tab = () => {
     const{tab,setTab}=useContext(WorkoutContext);
     return (
         <div>
-            <div className='flex gap-4'>
+            <div className='flex gap-4 p-2'>
                 <button
                     onClick={() => setTab('myPlan')}
-                    className={tab === 'myPlan' ? 'bg-[#1F242D]' : ''}
+                    className={tab === 'myPlan' ? 'text-xs p-1.5 px-4 rounded-lg bg-[#1F242D]' : 'text-xs p-1.5 text-[#A1A1AA]'}
                 >
                     Today's Plan
                 </button>
 
                 <button
                     onClick={() => setTab('saved')}
-                    className={tab === 'saved' ? 'bg-[#1F242D]' : ''}
+                    className={tab === 'saved' ? 'text-xs p-1.5 px-4 rounded-lg bg-[#1F242D]' : 'text-xs p-1.5 text-[#A1A1AA]'}
                 >
                     Saved
                 </button>

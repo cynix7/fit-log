@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Remove from './Remove';
 
 
-const PlanCard = ({ library }: { library: LibraryType }) => {
+const SavedCard = ({ library }: { library: LibraryType }) => {
     return (
         <div className='flex justify-between bg-[#13161D] my-4'>
             <div className='flex'>
@@ -25,11 +25,10 @@ const PlanCard = ({ library }: { library: LibraryType }) => {
             </div>
             <div className='flex gap-4 items-center mr-4'>
                 <Link href={`/${library.id}`}><button className='border border-[#374151] rounded-lg cursor-pointer my-auto p-2.5 text-xs font-semibold'>View Details</button></Link>
-                <button className='my-4'><h2 className='bg-[#C2F800] text-black text-center text-xs font-bold uppercase p-2.5 border-0 rounded-2xl'>Mark as Done</h2></button>
                 <Remove library={library}></Remove>
             </div>
         </div>
     );
 };
 
-export default PlanCard;
+export default SavedCard;

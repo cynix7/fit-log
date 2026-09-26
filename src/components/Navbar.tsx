@@ -4,12 +4,12 @@ import logo from '../../public/logo.png'
 import Link from 'next/link';
 import Plan from './Counter/Plan';
 import Saved from './Counter/Saved';
+import NavTab from './NavTab';
 
 const Navbar = () => {
 
     const Links = <>
-        <li className='bg-[#1A2312] border-0 rounded-3xl text-[#C2F800]'><Link href='/'> Workouts</Link></li>
-        <li className='text-[#9CA3AF]'><Link href='/myplan'>My Plan</Link></li>
+        <NavTab></NavTab>
     </>
     return (
         <nav className=' bg-black border-b border-[#1C1F26] sticky top-0 z-50'>

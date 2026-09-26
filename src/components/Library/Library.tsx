@@ -10,7 +10,7 @@ const getLibrary= async()=>{
 const Library = async() => {
    const libraryData= await getLibrary();
     return (
-        <div className='container mx-auto'>
+        <div id='Library' className='container mx-auto'>
             <h2 className='text-2xl font-bold'>THE LIBRARY</h2>
             <p className='text-[#9CA3AF] text-xs mb-4'>Twelve lifts covering every major muscle group.</p>
             <div className='grid grid-cols-3 gap-4'>
